@@ -12,5 +12,5 @@ import javax.persistence.criteria.From;
 public interface VoteRepository extends JpaRepository<Vote, Integer> {
     //Next, let's add the instance-level annotation, @Query
     @Query("SELECT count(*) FROM Vote v where v.postId = :id")
-    int countVoteByPostId(@Param("id") Integer id);
+    int countVotesByPostId(@Param("id") Integer id);
 }
